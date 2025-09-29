@@ -1,3 +1,4 @@
+<!-- ================= index.html (Home Page) ================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,243 +6,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TradePulse Research Survey</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #e6f0ff; /* light blue */
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background-color: #005bb5;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-    }
-
-    .logo-shape {
-      width: 28px;
-      height: 28px;
-      background: white;
-      border-radius: 4px;
-      margin-right: 10px;
-      position: relative;
-    }
-
-    .logo-shape::after {
-      content: "";
-      position: absolute;
-      bottom: 4px;
-      left: 6px;
-      width: 14px;
-      height: 14px;
-      background: #005bb5;
-      border-radius: 2px;
-      transform: rotate(45deg);
-    }
-
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-      flex: 1;
-    }
-
-    h1, h2 {
-      color: #222;
-    }
-
-    section {
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      margin-bottom: 40px;
-    }
-
-    .button-container {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .survey-btn {
-      background-color: #0073e6;
-      color: white;
-      padding: 14px 28px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      transition: background-color 0.2s ease;
-    }
-
-    .survey-btn:hover {
-      background-color: #004c99;
-    }
-
-    .divider {
-      margin: 40px 0;
-      text-align: center;
-      color: #999;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #666;
-      margin: 50px 0 20px;
-    }
-
-    svg {
-      width: 100%;
-      height: 300px;
-      margin-top: 20px;
-    }
-
-    /* Animate the line */
-    .line {
-      stroke-dasharray: 600;
-      stroke-dashoffset: 600;
-      animation: drawLine 3s ease forwards;
-    }
-
-    @keyframes drawLine {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .container { padding: 0 10px; }
-    }
+    body { font-family: Arial, sans-serif; margin: 0; background: #e6f0ff; color: #333; display: flex; flex-direction: column; min-height: 100vh; }
+    header { background-color: #005bb5; color: white; padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+    .logo { display: flex; align-items: center; font-weight: bold; font-size: 1.5rem; letter-spacing: 1px; }
+    .logo-shape { width: 28px; height: 28px; background: white; border-radius: 4px; margin-right: 10px; position: relative; }
+    .logo-shape::after { content: ""; position: absolute; bottom: 4px; left: 6px; width: 14px; height: 14px; background: #005bb5; border-radius: 2px; transform: rotate(45deg); }
+    nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.95rem; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { display: flex; max-width: 1200px; margin: 40px auto; padding: 0 20px; flex: 1; }
+    main { flex: 3; margin-right: 20px; line-height: 1.6; }
+    aside { flex: 1; }
+    h1, h2 { color: #222; }
+    section { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 40px; }
+    .widget { background: white; padding: 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .widget h3 { margin-top: 0; font-size: 1.1rem; color: #005bb5; }
+    .button-container { text-align: center; margin: 30px 0; }
+    .survey-btn { background-color: #0073e6; color: white; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; transition: background-color 0.2s ease; }
+    .survey-btn:hover { background-color: #004c99; }
+    .divider { margin: 40px 0; text-align: center; color: #999; }
+    footer { text-align: center; font-size: 0.85rem; color: #666; margin: 50px 0 20px; }
+    @media (max-width: 900px) { .container { flex-direction: column; } main { margin-right: 0; } }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <div class="logo">
-      <div class="logo-shape"></div>
-      TradePulse
-    </div>
+    <div class="logo"><div class="logo-shape"></div>TradePulse</div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-
-  <!-- Home Section -->
-  <div id="home" class="container">
-    <section>
-      <h1>About TradePulse</h1>
-      <p>
-        TradePulse is a financial research collective dedicated to analyzing investor behavior and 
-        emerging trends across global markets. We blend quantitative data with real-world insights 
-        from traders to create reports that inform decision-making for institutions, fintech startups, 
-        and retail investors alike.
-      </p>
-      <p>
-        Our mission is to empower communities of investors with actionable knowledge and bring clarity 
-        to how markets evolve in response to technology, sentiment, and regulation.
-      </p>
-    </section>
-
-    <section>
-      <div class="button-container">
-        <a href="https://www.surveymonkey.com/r/SGWCKSW" class="survey-btn" target="_blank">Take the Survey</a>
+  <div class="container">
+    <main>
+      <section>
+        <h1>About TradePulse</h1>
+        <p>TradePulse is a financial research collective dedicated to analyzing investor behavior and emerging trends across global markets. We blend quantitative data with real-world insights from traders to create reports that inform decision-making for institutions, fintech startups, and retail investors alike.</p>
+        <p>Our mission is to empower communities of investors with actionable knowledge and bring clarity to how markets evolve in response to technology, sentiment, and regulation.</p>
+      </section>
+      <section>
+        <div class="button-container">
+          <a href="https://www.surveymonkey.com/r/SGWCKSW" class="survey-btn" target="_blank">Take the Survey</a>
+        </div>
+        <h2>Privacy Policy</h2>
+        <p>We collect your survey responses about trading activity for research purposes only. Your information will not be sold. Responses may be used in aggregated or anonymized form. Participation is voluntary, and you may stop at any time.</p>
+        <div class="divider">⸻</div>
+        <h2>Terms &amp; Conditions</h2>
+        <p>By taking this survey, you agree that your responses may be used for research and analysis. Participation is voluntary and offers no guarantees, benefits, or compensation unless stated otherwise.</p>
+      </section>
+    </main>
+    <aside>
+      <div class="widget">
+        <h3>Market Snapshot</h3>
+        <p>📈 S&P 500: 6,643.70</p>
+        <p>💹 Nasdaq: 22,484.07</p>
+        <p>🏦 Dow Jones: 46,247.29</p>
       </div>
-
-      <h2>Privacy Policy</h2>
-      <p>
-        We collect your survey responses about trading activity for research 
-        purposes only. Your information will not be sold. Responses may be 
-        used in aggregated or anonymized form. Participation is voluntary, 
-        and you may stop at any time.
-      </p>
-
-      <div class="divider">⸻</div>
-
-      <h2>Terms &amp; Conditions</h2>
-      <p>
-        By taking this survey, you agree that your responses may be used for 
-        research and analysis. Participation is voluntary and offers no 
-        guarantees, benefits, or compensation unless stated otherwise.
-      </p>
-    </section>
+      <div class="widget">
+        <h3>Crypto Watch</h3>
+        <p>₿ Bitcoin: $111,904.80</p>
+        <p>Ξ Ethereum: $4,118.06</p>
+        <p>🪙 Solana: $210.12</p>
+      </div>
+      <div class="widget">
+        <h3>Research Highlight</h3>
+        <p><strong>Q3 Report:</strong> Retail trading volumes surged 18% in tech stocks — driven by new trading apps.</p>
+      </div>
+    </aside>
   </div>
+  <footer>&copy; 2025 TradePulse Research | All rights reserved</footer>
+</body>
+</html>
 
-  <!-- Research Section -->
-  <div id="research" class="container">
-    <section>
-      <h1>Retail Investor Interest Over Time</h1>
-      <svg viewBox="0 0 600 300">
-        <!-- Grid lines -->
-        <line x1="50" y1="250" x2="550" y2="250" stroke="#ccc" />
-        <line x1="50" y1="200" x2="550" y2="200" stroke="#ccc" />
-        <line x1="50" y1="150" x2="550" y2="150" stroke="#ccc" />
-        <line x1="50" y1="100" x2="550" y2="100" stroke="#ccc" />
-        <line x1="50" y1="50" x2="550" y2="50" stroke="#ccc" />
+<!-- ================= research.html (Research Page) ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - TradePulse</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#e6f0ff; color:#333; }
+    header { background:#005bb5; color:white; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; }
+    nav a { color:white; margin-left:20px; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    main { max-width:900px; margin:40px auto; padding:20px; background:white; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+    h1 { color:#222; }
+    svg { width:100%; height:300px; }
+    footer { text-align:center; font-size:0.85rem; color:#666; margin:50px 0 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><div class="logo-shape" style="width:20px;height:20px;background:white;margin-right:10px;"></div>TradePulse</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Retail Investor Interest Over Time</h1>
+    <svg viewBox="0 0 600 300">
+      <polyline fill="none" stroke="#0073e6" stroke-width="3"
+        points="0,250 100,220 200,200 300,150 400,100 500,70 600,50"/>
+      <circle cx="100" cy="220" r="5" fill="#0073e6"/>
+      <circle cx="200" cy="200" r="5" fill="#0073e6"/>
+      <circle cx="300" cy="150" r="5" fill="#0073e6"/>
+      <circle cx="400" cy="100" r="5" fill="#0073e6"/>
+      <circle cx="500" cy="70" r="5" fill="#0073e6"/>
+      <circle cx="600" cy="50" r="5" fill="#0073e6"/>
+    </svg>
+    <p style="margin-top:20px;">This chart represents a simplified view of retail investor interest in stocks, showing a steady rise over time.</p>
+  </main>
+  <footer>&copy; 2025 TradePulse Research | All rights reserved</footer>
+</body>
+</html>
 
-        <!-- Animated line -->
-        <polyline class="line" fill="none" stroke="#0073e6" stroke-width="3"
-          points="50,240 100,220 150,210 200,180 250,160 300,140 350,120 400,90 450,80 500,60 550,50" />
-
-        <!-- Data points -->
-        <circle cx="100" cy="220" r="5" fill="#0073e6" />
-        <circle cx="200" cy="180" r="5" fill="#0073e6" />
-        <circle cx="300" cy="140" r="5" fill="#0073e6" />
-        <circle cx="400" cy="90" r="5" fill="#0073e6" />
-        <circle cx="500" cy="60" r="5" fill="#0073e6" />
-      </svg>
-      <p>
-        This animated chart illustrates a steady rise in retail investor interest in stocks over time.
-      </p>
-    </section>
-  </div>
-
-  <!-- Contact Section -->
-  <div id="contact" class="container">
-    <section>
-      <h1>Contact Us</h1>
-      <p>To contact us, please fill out our survey and we will reach back out to you.</p>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 TradePulse Research | All rights reserved
-  </footer>
-
+<!-- ================= contact.html (Contact Page) ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - TradePulse</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#e6f0ff; color:#333; }
+    header { background:#005bb5; color:white; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; }
+    nav a { color:white; margin-left:20px; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    main { max-width:800px; margin:40px auto; padding:20px; background:white; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+    h1 { color:#222; }
+    footer { text-align:center; font-size:0.85rem; color:#666; margin:50px 0 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><div class="logo-shape" style="width:20px;height:20px;background:white;margin-right:10px;"></div>TradePulse</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Contact Us</h1>
+    <p>To contact us, please fill out our survey and we will reach back out to you.</p>
+  </main>
+  <footer>&copy; 2025 TradePulse Research | All rights reserved</footer>
 </body>
 </html>
