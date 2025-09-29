@@ -8,18 +8,22 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #e6f0ff, #f9f9f9);
+      background: #e6f0ff; /* light blue */
       color: #333;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #0073e6;
+      background-color: #005bb5;
       color: white;
       padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
@@ -46,7 +50,7 @@
       left: 6px;
       width: 14px;
       height: 14px;
-      background: #0073e6;
+      background: #005bb5;
       border-radius: 2px;
       transform: rotate(45deg);
     }
@@ -99,7 +103,7 @@
     }
 
     .survey-btn:hover {
-      background-color: #005bb5;
+      background-color: #004c99;
     }
 
     .divider {
@@ -128,10 +132,10 @@
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#contact">Contact</a>
+      <a href="#survey">Survey</a>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main>
     <!-- About -->
     <section id="about">
@@ -168,13 +172,13 @@
     <section id="contact">
       <h2>Contact Us</h2>
       <p>
-        Have questions or want to collaborate? Reach out to us anytime at:<br>
+        Have questions or want to collaborate? Reach out to us anytime:<br>
         <strong>busydescription@gmail.com</strong>
       </p>
     </section>
 
-    <!-- Survey Section -->
-    <section>
+    <!-- Survey -->
+    <section id="survey">
       <div class="button-container">
         <a href="https://www.surveymonkey.com/r/SGWCKSW" class="survey-btn" target="_blank">Take the Survey</a>
       </div>
