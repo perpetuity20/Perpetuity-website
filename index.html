@@ -13,6 +13,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -23,6 +24,9 @@
       align-items: center;
       justify-content: space-between;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
@@ -162,14 +166,14 @@
       TradePulse
     </div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="contact.html">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- Content + Sidebar -->
-  <div class="container">
+  <div id="home" class="container">
     <main>
       <!-- About -->
       <section>
@@ -230,6 +234,29 @@
         <p><strong>Q3 Report:</strong> Retail trading volumes surged 18% in tech stocks — driven by new trading apps.</p>
       </div>
     </aside>
+  </div>
+
+  <!-- Research Section -->
+  <div id="research" class="container">
+    <main>
+      <section>
+        <h1>Retail Investor Interest Over Time</h1>
+        <img src="9FB6AB9E-A5F7-4BC8-A810-14BEFAB22A41.png" alt="Trading Volumes Graph" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+        <p style="margin-top:20px;">
+          This chart shows average daily trading volumes, illustrating how retail interest in stocks has surged in recent years.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="container">
+    <main>
+      <section>
+        <h1>Contact Us</h1>
+        <p>To contact us, please fill out our survey and we will reach back out to you.</p>
+      </section>
+    </main>
   </div>
 
   <!-- Footer -->
