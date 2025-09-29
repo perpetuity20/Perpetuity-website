@@ -8,7 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
+      background: linear-gradient(135deg, #e6f0ff, #f9f9f9);
       color: #333;
     }
 
@@ -19,12 +19,36 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
     .logo {
+      display: flex;
+      align-items: center;
       font-weight: bold;
       font-size: 1.5rem;
       letter-spacing: 1px;
+    }
+
+    .logo-shape {
+      width: 28px;
+      height: 28px;
+      background: white;
+      border-radius: 4px;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .logo-shape::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 6px;
+      width: 14px;
+      height: 14px;
+      background: #0073e6;
+      border-radius: 2px;
+      transform: rotate(45deg);
     }
 
     nav a {
@@ -40,7 +64,7 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
@@ -50,7 +74,7 @@
       color: #222;
     }
 
-    .about {
+    section {
       background: white;
       padding: 25px;
       border-radius: 8px;
@@ -96,55 +120,82 @@
 
   <!-- Header -->
   <header>
-    <div class="logo">📊 TradePulse</div>
+    <div class="logo">
+      <div class="logo-shape"></div>
+      TradePulse
+    </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Research</a>
-      <a href="#">Contact</a>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- Main Content -->
   <main>
-    <!-- Company Bio -->
-    <section class="about">
+    <!-- About -->
+    <section id="about">
       <h1>About TradePulse</h1>
       <p>
-        At TradePulse, we specialize in analyzing financial markets and 
-        uncovering new insights into how everyday investors make decisions. 
-        Our mission is to bridge the gap between professional research and 
-        real-world trading experiences, helping both institutions and retail 
-        investors understand the evolving landscape of modern markets.
+        TradePulse is a financial research collective dedicated to analyzing investor behavior and 
+        emerging trends across global markets. We blend quantitative data with real-world insights 
+        from traders to create reports that inform decision-making for institutions, fintech startups, 
+        and retail investors alike.
       </p>
       <p>
-        We partner with communities of traders to gather insights, identify 
-        market trends, and publish data-driven reports that shape the future 
-        of investing.
+        Our mission is to empower communities of investors with actionable knowledge and bring clarity 
+        to how markets evolve in response to technology, sentiment, and regulation.
+      </p>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+      <h2>Our Research</h2>
+      <p>
+        We publish quarterly insights on market structure, investor psychology, and trading trends. 
+        Our work has been cited by financial journalists and relied upon by hedge funds and 
+        fintech innovators. Research topics include:
+      </p>
+      <ul>
+        <li>Retail trading behavior and sentiment analysis</li>
+        <li>Impact of cryptocurrency adoption on traditional markets</li>
+        <li>AI-driven portfolio strategies and automation</li>
+        <li>Global market liquidity and cross-border capital flows</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        Have questions or want to collaborate? Reach out to us anytime at:<br>
+        <strong>busydescription@gmail.com</strong>
       </p>
     </section>
 
     <!-- Survey Section -->
-    <div class="button-container">
-      <a href="https://www.surveymonkey.com/r/SGWCKSW" class="survey-btn" target="_blank">Take the Survey</a>
-    </div>
+    <section>
+      <div class="button-container">
+        <a href="https://www.surveymonkey.com/r/SGWCKSW" class="survey-btn" target="_blank">Take the Survey</a>
+      </div>
 
-    <h2>Privacy Policy</h2>
-    <p>
-      We collect your survey responses about trading activity for research 
-      purposes only. Your information will not be sold. Responses may be 
-      used in aggregated or anonymized form. Participation is voluntary, 
-      and you may stop at any time.
-    </p>
+      <h2>Privacy Policy</h2>
+      <p>
+        We collect your survey responses about trading activity for research 
+        purposes only. Your information will not be sold. Responses may be 
+        used in aggregated or anonymized form. Participation is voluntary, 
+        and you may stop at any time.
+      </p>
 
-    <div class="divider">⸻</div>
+      <div class="divider">⸻</div>
 
-    <h2>Terms &amp; Conditions</h2>
-    <p>
-      By taking this survey, you agree that your responses may be used for 
-      research and analysis. Participation is voluntary and offers no 
-      guarantees, benefits, or compensation unless stated otherwise.
-    </p>
+      <h2>Terms &amp; Conditions</h2>
+      <p>
+        By taking this survey, you agree that your responses may be used for 
+        research and analysis. Participation is voluntary and offers no 
+        guarantees, benefits, or compensation unless stated otherwise.
+      </p>
+    </section>
   </main>
 
   <!-- Footer -->
