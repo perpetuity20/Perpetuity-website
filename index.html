@@ -93,6 +93,39 @@
       transform: scale(1.05);
       box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     }
+
+    /* Sidebar Widgets */
+    .sidebar {
+      position: fixed;
+      top: 120px;
+      width: 200px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      font-size: 0.9rem;
+    }
+
+    .left-sidebar {
+      left: 15px;
+    }
+
+    .right-sidebar {
+      right: 15px;
+    }
+
+    .widget {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 2px solid #ff6f61;
+      border-radius: 8px;
+    }
+
+    .widget h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #ff3d3d;
+    }
   </style>
 </head>
 <body>
@@ -103,6 +136,32 @@
     </div>
   </header>
 
+  <!-- Left Sidebar Widgets -->
+  <div class="sidebar left-sidebar">
+    <div class="widget">
+      <h3>Trending Reddit Stats</h3>
+      <p>🔥 r/technology up 12% in activity this week</p>
+      <p>📈 r/finance growing rapidly</p>
+      <p>😂 Memes dominate r/funny</p>
+    </div>
+    <div class="widget">
+      <h3>Fun Fact</h3>
+      <p>Reddit has over 100K active communities!</p>
+    </div>
+  </div>
+
+  <!-- Right Sidebar Widgets -->
+  <div class="sidebar right-sidebar">
+    <div class="widget">
+      <h3>Live Clock</h3>
+      <p id="clock"></p>
+    </div>
+    <div class="widget">
+      <h3>Quote of the Day</h3>
+      <p>"Data is the new oil, but insight is the refinery."</p>
+    </div>
+  </div>
+
   <div class="content">
     <h1>Welcome to RedPulse Research</h1>
     <p>
@@ -111,7 +170,7 @@
 
     <h2>What We Do</h2>
     <p>
-      At RedPulse, we transform insights from social media into meaningful innovations. By analyzing trends, discussions, 
+      At RedPulse, we transform insights from Reddit into meaningful innovations. By analyzing trends, discussions, 
       and engagement patterns, we develop stronger AI-driven tools that help companies, communities, and researchers 
       better understand online behavior. Our goal is to bridge the gap between human conversation and artificial intelligence.
     </p>
@@ -127,5 +186,15 @@
       Fill out our survey to be considered across our paid research studies!
     </a>
   </div>
+
+  <script>
+    // Live Clock Script
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('clock').textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
